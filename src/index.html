@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- 双向数据绑定 靠的是表单 -->
+    <input type="text" v-model='message.name'> {{message.name}}
+    <ul>
+      <li>1111</li>
+    </ul>
+    <div>{{message.a}}</div>
+  </div>
+  <!-- <script src="../node_modules/vue/dist/vue.js"></script> -->
+  <script src="Watcher.js"></script>
+  <script src="Observer.js"></script>
+  <script src="Compile.js"></script>
+  <script src="MVVM.js"></script>
+  <script>
+    let vm = new MVVM({
+      el: '#app',
+      data: {
+        message: { name: 'hello world', a: 88 }
+      }
+    });
+  </script>
+</body>
+
+</html>
